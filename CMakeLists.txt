@@ -4,3 +4,5 @@ project(ECVS)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(ECVS main.cpp)
+
+add_subdirectory(google_test)

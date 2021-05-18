@@ -10,6 +10,11 @@ struct voter_t {
     string name;
     int age;
     string suburb;
-    char electorate[20];
+    string date_of_birth;
     int candidate_selection;
+    string electorate;
+    bool previously_voted;
+    int salary;
+    bool retired;
 };
+

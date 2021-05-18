@@ -12,6 +12,8 @@ using namespace std;
 
 
 // The candidate table needs to give a number for candidates
+// My feeling is that ranking shouldn't be part of the struct as it
+//      will increase the number of executions and be a PITA to deal with
 struct candidate
 {
     int id;                 // ID of candidate
@@ -27,7 +29,9 @@ struct candidate
 };
 
 
-
+// need more candidates and their details should be filled out
+// regardless of how fucked the requirements are given the additional
+// fields aren't even used
 candidate Candidate_1 =
 {
     "Candidate 1",              // name

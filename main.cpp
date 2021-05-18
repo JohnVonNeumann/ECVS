@@ -24,7 +24,12 @@ using namespace std;
  *      all i can think of is over-complicated inefficient solutions
  */
 
+// Function Prototypes
 char menu();
+void print_candidate_numbers();
+void add_votes_to_candidate();
+void display_lowest_voted_candidate();
+void display_highest_voted_candidate();
 
 int main()
 {
@@ -47,6 +52,7 @@ int main()
 	        menu();
 	}
 }
+
 
 char menu()
 {

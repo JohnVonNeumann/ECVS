@@ -6,8 +6,10 @@ using namespace std;
 /*
  * Present menu to user
  * If selection P:
- *      print and ask for a candidate id
- *          list all candidates alongside their candidate id
+ *      print a formatted list of all candidates alongside their candidate id
+ *      print prompt and ask for a candidate id
+ *      find the candidate struct with the correct candidate id
+ *      print the candidate.count struct field
  *
  * If selection A:
  *      Print and ask for a voter id
@@ -15,7 +17,14 @@ using namespace std;
  *      print and ask for a candidate id
  *      assign the candidate_id choice to the voter.selection struct field
  *      increment the count of the candidate.count struct field
+ *
+ * If selection S:
+ *      all i can think of is over-complicated inefficient solutions
+ *
+ * If selection L:
+ *      all i can think of is over-complicated inefficient solutions
  */
+
 char menu();
 
 

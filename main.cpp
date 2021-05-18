@@ -1,88 +1,73 @@
-//
-//  main.cpp
-//  SWE_Project
-//
-//  Created by Benedict Tivisini on 8/5/21.
-//  Also edited by JVN
-
-#include <iostream>
-#include <cmath>
-
+#include<iostream>
+#include<fstream>
 using namespace std;
 
 
-struct candidate
-{
-    char name[30];          // Name of candidate
-    int age;                // Age of candidate
-    char gender[6];         // Gender of candidate (male/female/other)
-    char electorate[20];    // Electorate (district/region)
-    char party[30];         // Name of the candidate's party
-    char abbreviation[5];   // Abbreviated party name
-    char logo[30];          // Description of party's symbol
-    char officer[30];       // Registered officer of the party
-    int count;              // Current number of votes for candidate
-    int ranking;            // Ranking across candidates (1 being most votes)
-};
-
-
-
-candidate Candidate_1 =
-{
-    
-"Candidate 1",              // name
-0,                          // age
-"",                         // gender
-"",                         // electorate
-"Australian Labor Party",   // party
-"ALP",                      // abbreviation
-"Text: 'Victorian Labour'", // logo
-"Mr Christopher Ford",      // officer
-0,                          // count
-0,                          // ranking
-    
-};
-
-candidate Candidate_2 =
-{
-    
-"Candidate 2",              // name
-0,                          // age
-"",                         // gender
-"",                         // electorate
-"Australian Labor Party",   // party
-"ALP",                      // abbreviation
-"Text: 'Victorian Labour'", // logo
-"Mr Christopher Ford",      // officer
-0,                          // count
-0,                          // ranking
-    
-};
-
-
-
-candidate  =
-{
-    
-        // name
-        // age
-        // gender
-        // electorate
-        // party
-        // abbreviation
-        // logo
-        // officer
-        // count
-        // ranking
-    
-};
-
+/*
+ * Present menu to user
+ * If selection P:
+ *      print and ask for a candidate id
+ *          list all candidates alongside their candidate id
+ *
+ * If selection A:
+ *      Print and ask for a voter id
+ *      once input
+ *      print and ask for a candidate id
+ *      assign the candidate_id choice to the voter.selection struct field
+ *      increment the count of the candidate.count struct field
+ */
+char menu();
 
 
 
 int main()
 {
-    
 
-    return 0;
+	
+
+
+	char choice;
+
+	choice = menu();
+
+	switch (choice)
+	{
+	case "P":
+
+		break;
+	case "A":
+		break;
+	
+	case "S":
+		break;
+
+	case "L":
+		break;
+
+	case "Q":
+		break;
+
+	}
+
+}
+
+
+char menu()
+{
+
+	char choice;
+
+	do
+	{
+		cout << "Main menu:" << endl << "Please choose from the following" << endl;
+
+		cout << "P - Display information on certain candidate" << endl;
+		cout << "A - Add votes to candidate" << endl;
+		cout << "S - Display candidate with smallest amount of votes" << endl;
+		cout << "L - Display candidate with largest number of votes" << endl;
+		cout << "Q - Quit" << endl;
+		cin >> choice;
+	} while (choice != "P" || choice != "A" || choice != "S" || choice != "L" || choice != "Q")
+
+		return choice;
 }

@@ -147,3 +147,16 @@ voter_t voter_10 {
         90000,
         true
 };
+
+voter_t voter[10] = {
+        voter_1,
+        voter_2,
+        voter_3,
+        voter_4,
+        voter_5,
+        voter_6,
+        voter_7,
+        voter_8,
+        voter_9,
+        voter_10
+};

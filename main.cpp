@@ -103,7 +103,7 @@ void add_votes_to_candidate()
 
 	voter[votchoice - 1].candidate_selection = canchoice;
 	candidate[canchoice - 1].count += 1;
-	cout << candidate[canchoice - 1].name << " has " << candidate[canchoice - 1].count << " votes " << endl;
+	cout << candidate[canchoice - 1].name << " now has " << candidate[canchoice - 1].count << " votes " << endl;
 }
 
 

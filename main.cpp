@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
-#include "voter.cpp"
-#include "candidate.cpp"
+#include "voter.h"
+#include "candidate.h"
 
 using namespace std;
 

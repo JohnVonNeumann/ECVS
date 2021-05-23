@@ -32,9 +32,12 @@ void print_candidate_numbers();
 void add_votes_to_candidate();
 void display_lowest_voted_candidate();
 void display_highest_voted_candidate();
+void welcome_banner();
+void print_help();
 
 int main()
 {
+    welcome_banner();
 	while (true)
 	{
 		char choice;
@@ -158,6 +161,15 @@ void print_help() {
     cout << "S - Display candidate with smallest amount of votes" << endl;
     cout << "L - Display candidate with largest number of votes" << endl;
     cout << "Q - Quit" << endl << endl;
+}
+
+void welcome_banner() {
+    cout << " ______ _______      _______ " << endl;
+    cout << "|  ____/ ____\\ \\    / / ____|" << endl;
+    cout << "| |__ | |     \\ \\  / / (___  " << endl;
+    cout << "|  __|| |      \\ \\/ / \\___ \\ " << endl;
+    cout << "| |___| |____   \\  /  ____) |" << endl;
+    cout << "|______\\_____|   \\/  |_____/ " << endl;
 }
 
 char menu()

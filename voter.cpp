@@ -4,7 +4,6 @@
 #include <fstream>
 #include "voter.h"
 
-using namespace std;
 
 struct voter_t {
     int voter_id;

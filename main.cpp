@@ -55,12 +55,11 @@ int main()
                 display_highest_voted_candidate();
                 break;
             case 'Q':
-                exit(1);
+                exit(0);
             default:
                 menu();
 		}
 	}
-	return 0;
 }
 
 void print_candidate_numbers()

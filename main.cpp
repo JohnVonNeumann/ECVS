@@ -68,15 +68,13 @@ void print_candidate_numbers()
 
 	cout << "Enter candidate ID: " << endl;
 	cin >> choice;
-	while (choice > 10 || choice < 0)
+	while (choice < 1 || choice > 10)
 	{
-		cout << "Enter candidate ID: " << endl;
-		cin >> choice;
+	    cout << "Please enter a candidate ID between 1 and 10: " << endl;
+	    cin >> choice;
 	}
-	cout << "Candidate " << candidate[choice - 1].id << " - " << candidate[choice - 1].name << " has " << candidate[choice - 1].count << " votes" << endl << endl;
+	cout << "Candidate " << candidate[choice - 1].id << " - " << candidate[choice - 1].name << " has " << candidate[choice - 1].count << " votes" << endl;
 }
-
-
 
 void add_votes_to_candidate()
 {

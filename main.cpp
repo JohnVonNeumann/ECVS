@@ -140,7 +140,11 @@ void display_lowest_voted_candidate()
 			temp = candidate[i].count;
 			index = i;
 		}
+	}
 
+	// ugly hack solution for dealing with ties, could probably deal with this in
+	// the loop one level higher but we're close to submission
+	// FUTURE WORK: create more efficient logic
 	for (int i = 0; i < 10; i++) {
 	    if (temp == candidate[i].count) {
             cout << "The lowest amount of votes is " << candidate[i].name << " with " << candidate[i].count
@@ -162,7 +166,15 @@ void display_highest_voted_candidate()
 		}
 	}
 
-	cout << "The highest amount of votes is " << candidate[index].name << " with " << candidate[index].count << " votes" << endl << endl;
+    // ugly hack solution for dealing with ties, could probably deal with this in
+    // the loop one level higher but we're close to submission
+    // FUTURE WORK: create more efficient logic
+    for (int i = 0; i < 10; i++) {
+        if (large == candidate[i].count) {
+            cout << "The highest amount of votes is " << candidate[i].name << " with " << candidate[i].count
+                 << " votes" << endl;
+        }
+    }
 
 }
 

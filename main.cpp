@@ -178,34 +178,31 @@ void display_highest_voted_candidate()
 
 }
 
+void print_help() {
+    cout << "Main menu:" << endl << "Please choose from the following" << endl;
+    cout << "P - Display information on certain candidate" << endl;
+    cout << "A - Add votes to candidate" << endl;
+    cout << "S - Display candidate with smallest amount of votes" << endl;
+    cout << "L - Display candidate with largest number of votes" << endl;
+    cout << "Q - Quit" << endl << endl;
+}
 
 char menu()
 {
-	char choice; 
-	// create a print_menu
-        cout << "Main menu:" << endl << "Please choose from the following" << endl;
-		cout << "P - Display information on certain candidate" << endl;
-		cout << "A - Add votes to candidate" << endl;
-		cout << "S - Display candidate with smallest amount of votes" << endl;
-		cout << "L - Display candidate with largest number of votes" << endl;
-		cout << "Q - Quit" << endl << endl;
-		cin >> choice;
-		cout << endl << endl;
+	char choice;
+	print_help();
+    cin >> choice;
+    choice = toupper(choice);
+    cout << endl;
 
-		while (choice != 'P' && choice != 'A' && choice != 'S' && choice != 'L' && choice != 'Q' && choice != 'p' && choice != 'a' && choice != 's' && choice != 'l' && choice != 'q')
-		{
-			cout << "Unknown Selection, Please Try Again" << endl;
-			cout << "Main menu:" << endl << "Please choose from the following" << endl;
-			cout << "P - Display information on certain candidate" << endl;
-			cout << "A - Add votes to candidate" << endl;
-			cout << "S - Display candidate with smallest amount of votes" << endl;
-			cout << "L - Display candidate with largest number of votes" << endl;
-			cout << "Q - Quit" << endl << endl;
-			cin >> choice;
-			cout << endl << endl;
-		 }
-	
-		choice = toupper(choice);
+    while (choice != 'P' && choice != 'A' && choice != 'S' && choice != 'L' && choice != 'Q')
+    {
+        cout << "Unknown Selection, Please Try Again" << endl;
+        print_help();
+        cin >> choice;
+        cout << endl << endl;
+     }
+
 	return choice;
 	
 }

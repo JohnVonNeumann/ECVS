@@ -5,19 +5,6 @@
 #include "voter.h"
 
 
-struct voter_t {
-    int voter_id;
-    string name;
-    int age;
-    string suburb;
-    string date_of_birth;
-    int candidate_selection;
-    string electorate;
-    bool previously_voted;
-    int salary;
-    bool retired;
-};
-
 voter_t voter_1 {
         1,
         "Frank Litz",

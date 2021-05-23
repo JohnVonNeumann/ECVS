@@ -8,32 +8,13 @@
 //  Updated by Benedict Tivisini on 22/5/21. 
 
 #include <iostream>
+#include "candidate.h"
 
 using namespace std;
 
-
-// CANDIDATE DATA STRUCTURE:
-
-struct CandidateInfo
-{
-    
-    int id;            // Candidate Number
-    string name;          // Name of candidate
-    int age;                // Age of candidate
-    string gender;         // Gender of candidate (male/female/other)
-    string electorate;    // Electorate (district/region)
-    string party;         // Name of the candidate's party
-    string abbreviation;   // Abbreviated party name
-    string logo;          // Description of party's symbol
-    string officer;       // Registered officer of the party
-    int count;              // Current number of votes for candidate
-};
-
-
-
 // SAMPLE CANDIDATE DATA:
 
-CandidateInfo candidate[10] = {
+extern CandidateInfo candidate[10] = {
     
     {1,"Candidate 1",48,"Male","Mulgrave","Australian Labor Party","ALP","Text: 'Victorian Labour'.","Mr Christopher Ford",2},
     

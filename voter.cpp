@@ -2,6 +2,7 @@
 // Created by jvn on 18/5/21.
 //
 #include <fstream>
+#include "voter.h"
 
 using namespace std;
 

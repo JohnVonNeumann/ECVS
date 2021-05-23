@@ -35,7 +35,7 @@ void display_highest_voted_candidate();
 
 int main()
 {
-	while (1)
+	while (true)
 	{
 		char choice;
 		choice = menu();

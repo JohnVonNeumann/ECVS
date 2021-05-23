@@ -1,4 +1,3 @@
-#include <fstream>
 #include <iostream>
 #include "voter.h"
 #include "candidate.h"
@@ -43,40 +42,24 @@ int main()
 
 		switch (choice)
 		{
-		case 'P':
-			print_candidate_numbers();
-			break;
-
-
-		case 'A':
-			add_votes_to_candidate();
-			break;
-
-
-		case 'S':
-			display_lowest_voted_candidate();
-
-			break;
-
-
-
-		case 'L':
-			display_highest_voted_candidate();
-
-			break;
-
-
-		case 'Q':
-			exit(1);
-			break;
-
-
-		default:
-			menu();
+		    case 'P':
+		        print_candidate_numbers();
+                break;
+            case 'A':
+                add_votes_to_candidate();
+                break;
+            case 'S':
+                display_lowest_voted_candidate();
+                break;
+            case 'L':
+                display_highest_voted_candidate();
+                break;
+            case 'Q':
+                exit(1);
+            default:
+                menu();
 		}
-
 	}
-
 	return 0;
 }
 
@@ -90,9 +73,7 @@ void print_candidate_numbers()
 	{
 		cout << "Enter candidate ID: " << endl;
 		cin >> choice;
-
 	}
-
 	cout << "Candidate " << candidate[choice - 1].id << " - " << candidate[choice - 1].name << " has " << candidate[choice - 1].count << " votes" << endl << endl;
 }
 
@@ -100,7 +81,6 @@ void print_candidate_numbers()
 
 void add_votes_to_candidate()
 {
-
 	int votchoice, canchoice;
 
 	cout << "Enter voter ID: " << endl;
@@ -123,9 +103,7 @@ void add_votes_to_candidate()
 
 	voter[votchoice - 1].candidate_selection = canchoice;
 	candidate[canchoice - 1].count += 1;
-
 	cout << candidate[canchoice - 1].name << " has " << candidate[canchoice - 1].count << " votes " << endl;
-
 }
 
 
@@ -151,7 +129,6 @@ void display_lowest_voted_candidate()
                  << " votes" << endl << endl;
         }
 	}
-
 }
 
 
@@ -175,7 +152,6 @@ void display_highest_voted_candidate()
                  << " votes" << endl;
         }
     }
-
 }
 
 void print_help() {
@@ -204,5 +180,4 @@ char menu()
      }
 
 	return choice;
-	
 }

@@ -2,7 +2,6 @@
 #include <vector>
 #include <sstream>
 #include <string>
-#include <fstream>
 
 #include "voter.h"
 #include "candidate.h"

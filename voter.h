@@ -1,7 +1,3 @@
-//
-// Created by lw on 23/5/21.
-//
-
 #include <fstream>
 #include <vector>
 

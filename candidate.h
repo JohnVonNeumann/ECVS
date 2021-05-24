@@ -2,6 +2,7 @@
 // Created by lw on 23/5/21.
 //
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -24,6 +25,6 @@ struct candidate_t
     int count;              // Current number of votes for candidate
 };
 
-extern candidate_t candidate[10];
+extern vector<candidate_t> candidates;
 
 #endif //ECVS_CANDIDATE_H

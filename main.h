@@ -1,7 +1,3 @@
-//
-// Created by lw on 24/5/21.
-//
-
 #ifndef ECVS_MAIN_H
 #define ECVS_MAIN_H
 
@@ -16,6 +12,5 @@ void read_voters_from_file();
 void read_candidates_from_file();
 void welcome_banner();
 void print_help();
-
 
 #endif //ECVS_MAIN_H

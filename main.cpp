@@ -157,6 +157,36 @@ void read_voters_from_file() {
     }
 }
 
+void read_candidates_from_file() {
+    string line;
+    string element;
+
+    ifstream file(CANDIDATE_FILE);
+
+    if (file.is_open()) {
+        while (getline(file, line)) {
+            vector<string> elements;
+            istringstream iss(line);
+            for (string line; iss >> line;) {
+                elements.push_back(line);
+            }
+
+            candidate_t c;
+            c.id = stoi(elements[0]);
+            c.name = elements[1];
+            c.age = stoi(elements[2]);
+            c.gender = elements[3];
+            c.electorate = elements[4];
+            c.party = elements[5];
+            c.abbreviation = elements[6];
+            c.political_position = elements[7];
+            c.officer = elements[8];
+            c.count = stoi(elements[9]);
+
+            candidates.push_back(c);
+        }
+    }
+}
 void print_candidate_numbers()
 {
 	int choice;

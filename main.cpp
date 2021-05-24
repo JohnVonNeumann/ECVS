@@ -177,14 +177,12 @@ void add_votes_to_candidate()
 
 void display_lowest_voted_candidate()
 {
-	int index;
 	int temp = candidates[0].count;
 	for (int i = 0; i < 10; i++)
 	{
 		if (temp > candidates[i].count)
 		{
 			temp = candidates[i].count;
-			index = i;
 		}
 	}
 
@@ -202,12 +200,11 @@ void display_lowest_voted_candidate()
 
 void display_highest_voted_candidate()
 {
-	int large, i, index;
+	int large;
 	large = candidates[0].count;
-	for (i = 1; i < 10; i++) {
+	for (int i = 1; i < 10; i++) {
 		if (candidates[i].count > large) {
 			large = candidates[i].count;
-			index = i;
 		}
 	}
 

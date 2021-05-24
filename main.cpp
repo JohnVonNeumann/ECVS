@@ -11,49 +11,6 @@ using namespace std;
 
 const string VOTER_FILE = "voter.txt";
 const string CANDIDATE_FILE = "candidate.txt";
-/*
- * Present menu to user
- * If selection P:
- *      print a formatted list of all candidates alongside their candidate id
- *      print prompt and ask for a candidate id
- *      find the candidate struct with the correct candidate id
- *      print the candidate.count struct field
- *
- * If selection A:
- *      Print and ask for a voter id
- *      once input
- *      print and ask for a candidate id
- *      assign the candidate_id choice to the voter.selection struct field
- *      increment the count of the candidate.count struct field
- *
- * If selection S:
- *      all i can think of is over-complicated inefficient solutions
- *
- * If selection L:
- *      all i can think of is over-complicated inefficient solutions
- */
-
-/*
- * Voter/Candidate Input/Output
- * Simplest solution is to not do inplace edits, just overwrite the entire file each time a change is made,
- * slow yes, but effective for what this assignment requires.
- *
- * Create separate config files for Voter and Candidate to reduce requirements for polymorphic record format handling
- * - a read file function for voter
- * - a write file function for voter
- * - a read file function for candidate
- * - a write file function for candidate
- *
- * test the write file function for both using the pre existing voter/candidate arrays
- *
- * still use the voter/candidate arrays, but the read file will load the entities in, so we shouldnt have to change
- * the core of the application
- *
- * pretty much just generating the structs dynamically as opposed to statically in the code
- *
- */
-
-// Function Prototypes
 
 int main()
 {

@@ -3,6 +3,7 @@
 //
 
 #include <fstream>
+#include <vector>
 
 using namespace std;
 
@@ -22,6 +23,6 @@ struct voter_t {
     bool retired;
 };
 
-extern voter_t voter[10];
+extern vector<voter_t> voters;
 
 #endif //ECVS_VOTER_H

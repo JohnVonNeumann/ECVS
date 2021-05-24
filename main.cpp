@@ -26,6 +26,26 @@ using namespace std;
  *      all i can think of is over-complicated inefficient solutions
  */
 
+/*
+ * Voter/Candidate Input/Output
+ * Simplest solution is to not do inplace edits, just overwrite the entire file each time a change is made,
+ * slow yes, but effective for what this assignment requires.
+ *
+ * Create separate config files for Voter and Candidate to reduce requirements for polymorphic record format handling
+ * - a read file function for voter
+ * - a write file function for voter
+ * - a read file function for candidate
+ * - a write file function for candidate
+ *
+ * test the write file function for both using the pre existing voter/candidate arrays
+ *
+ * still use the voter/candidate arrays, but the read file will load the entities in, so we shouldnt have to change
+ * the core of the application
+ *
+ * pretty much just generating the structs dynamically as opposed to statically in the code
+ *
+ */
+
 // Function Prototypes
 char menu();
 void print_candidate_numbers();

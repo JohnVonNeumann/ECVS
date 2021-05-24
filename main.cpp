@@ -100,10 +100,10 @@ void write_voters_to_file()
     // truncate to simplify the implementation
     file.open(VOTER_FILE, ios::trunc);
     for (int i = 0; i < 10; ++i) {
-        voter_t v = voter[i];
-        file << v.voter_id << ", " << v.name << ", " << v.age << ", "
-                << v.suburb << ", " << v.date_of_birth << ", " << v.candidate_selection << ", "
-                << v.electorate << ", " << v.previously_voted << ", " << v.salary << ", " << v.retired << endl;
+        voter_t v = voters[i];
+        file << v.voter_id << " " << v.name << " " << v.age << " "
+                << v.suburb << " " << v.date_of_birth << " " << v.candidate_selection << " "
+                << v.electorate << " " << v.previously_voted << " " << v.salary << " " << v.retired << endl;
     }
 }
 
@@ -114,11 +114,12 @@ void write_candidates_to_file()
     file.open(CANDIDATE_FILE, ios::trunc);
     for (int i = 0; i < 10; ++i) {
         candidate_t c = candidate[i];
-        file << c.id << ", " << c.name << ", " << c.age << ", "
-             << c.gender << ", " << c.electorate << ", " << c.party << ", "
-             << c.abbreviation << ", " << c.logo << ", " << c.officer << ", " << c.count << endl;
+        file << c.id << " " << c.name << " " << c.age << " "
+             << c.gender << " " << c.electorate << " " << c.party << " "
+             << c.abbreviation << " " << c.logo << " " << c.officer << " " << c.count << endl;
     }
 }
+
 
 void print_candidate_numbers()
 {

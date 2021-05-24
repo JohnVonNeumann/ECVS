@@ -85,11 +85,24 @@ int main()
                 display_highest_voted_candidate();
                 break;
             case 'Q':
+                write_voters_to_file();
                 exit(0);
             default:
                 menu();
 		}
 	}
+}
+
+void write_voters_to_file()
+{
+    ofstream file;
+    file.open(VOTER_FILE, ios::trunc);
+    for (int i = 0; i < 10; ++i) {
+        voter_t v = voter[i];
+        file << v.voter_id << ", " << v.name << ", " << v.age << ", "
+                << v.suburb << ", " << v.date_of_birth << ", " << v.candidate_selection << ", "
+                << v.electorate << ", " << v.previously_voted << ", " << v.salary << ", " << v.retired << endl;
+    }
 }
 
 void print_candidate_numbers()

@@ -10,7 +10,7 @@ using namespace std;
 
 // CANDIDATE DATA STRUCTURE:
 
-struct CandidateInfo
+struct candidate_t
 {
     int id;            // Candidate Number
     string name;          // Name of candidate
@@ -24,6 +24,6 @@ struct CandidateInfo
     int count;              // Current number of votes for candidate
 };
 
-extern CandidateInfo candidate[10];
+extern candidate_t candidate[10];
 
 #endif //ECVS_CANDIDATE_H

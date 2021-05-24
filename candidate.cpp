@@ -14,7 +14,7 @@ using namespace std;
 
 // SAMPLE CANDIDATE DATA:
 
-extern CandidateInfo candidate[10] = {
+extern candidate_t candidate[10] = {
     
     {1,"Candidate 1",48,"Male","Mulgrave","Australian Labor Party","ALP","Text: 'Victorian Labour'.","Mr Christopher Ford",2},
     

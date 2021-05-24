@@ -13,9 +13,9 @@ voter_t voter_1 {
         "23/12/56",
         0,
         "Nowhereville",
-        false,
+        "false",
         100000,
-        false
+        "false"
 };
 
 voter_t voter_2 {
@@ -26,9 +26,9 @@ voter_t voter_2 {
         "03/11/94",
         0,
         "Somewhereville",
-        true,
+        "true",
         31337,
-        true
+        "true"
 };
 
 voter_t voter_3 {
@@ -39,9 +39,9 @@ voter_t voter_3 {
         "11/04/29",
         0,
         "Whoknowsville",
-        true,
+        "true",
         100000000,
-        true
+        "true"
 };
 
 voter_t voter_4 {
@@ -52,9 +52,9 @@ voter_t voter_4 {
         "18/07/98",
         0,
         "Notsureville",
-        true,
+        "true",
         46578,
-        false
+        "false"
 };
 
 voter_t voter_5 {
@@ -65,9 +65,9 @@ voter_t voter_5 {
         "01/01/11",
         0,
         "Whocaresville",
-        true,
+        "true",
         3,
-        true
+        "true"
 };
 
 voter_t voter_6 {
@@ -78,9 +78,9 @@ voter_t voter_6 {
         "18/09/12",
         0,
         "Runningoutoffunnyplacesville",
-        false,
+        "false",
         467689,
-        false
+        "false"
 };
 
 voter_t voter_7 {
@@ -91,9 +91,9 @@ voter_t voter_7 {
         "15/06/15",
         0,
         "Honestlydonewiththisville",
-        true,
+        "true",
         21378,
-        false
+        "false"
 };
 
 voter_t voter_8 {
@@ -104,9 +104,9 @@ voter_t voter_8 {
         "17/11/24",
         0,
         "Whatville",
-        false,
+        "false",
         0,
-        false
+        "false"
 };
 
 voter_t voter_9 {
@@ -117,9 +117,9 @@ voter_t voter_9 {
         "12/10/13",
         0,
         "Wotville",
-        true,
+        "true",
         100,
-        true
+        "true"
 };
 
 voter_t voter_10 {
@@ -130,20 +130,21 @@ voter_t voter_10 {
         "04/03/02",
         0,
         "Lastoneville",
-        false,
+        "false",
         90000,
-        true
+        "true"
 };
 
-voter_t voter[10] = {
-        voter_1,
-        voter_2,
-        voter_3,
-        voter_4,
-        voter_5,
-        voter_6,
-        voter_7,
-        voter_8,
-        voter_9,
-        voter_10
-};
+vector<voter_t> voters = {};
+//voter_t voter[10] = {
+//        voter_1,
+//        voter_2,
+//        voter_3,
+//        voter_4,
+//        voter_5,
+//        voter_6,
+//        voter_7,
+//        voter_8,
+//        voter_9,
+//        voter_10
+//};

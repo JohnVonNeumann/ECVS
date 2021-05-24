@@ -2,6 +2,7 @@
 // Created by lw on 23/5/21.
 //
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -10,7 +11,7 @@ using namespace std;
 
 // CANDIDATE DATA STRUCTURE:
 
-struct CandidateInfo
+struct candidate_t
 {
     int id;            // Candidate Number
     string name;          // Name of candidate
@@ -19,11 +20,11 @@ struct CandidateInfo
     string electorate;    // Electorate (district/region)
     string party;         // Name of the candidate's party
     string abbreviation;   // Abbreviated party name
-    string logo;          // Description of party's symbol
+    string political_position;          // Description of party's symbol
     string officer;       // Registered officer of the party
     int count;              // Current number of votes for candidate
 };
 
-extern CandidateInfo candidate[10];
+extern vector<candidate_t> candidates;
 
 #endif //ECVS_CANDIDATE_H

@@ -3,6 +3,7 @@
 //
 
 #include <fstream>
+#include <vector>
 
 using namespace std;
 
@@ -17,11 +18,11 @@ struct voter_t {
     string date_of_birth;
     int candidate_selection;
     string electorate;
-    bool previously_voted;
+    string previously_voted;
     int salary;
-    bool retired;
+    string retired;
 };
 
-extern voter_t voter[10];
+extern vector<voter_t> voters;
 
 #endif //ECVS_VOTER_H

@@ -191,8 +191,8 @@ void display_lowest_voted_candidate()
 	// FUTURE WORK: create more efficient logic
 	for (int i = 0; i < 10; i++) {
 	    if (temp == candidates[i].count) {
-            cout << "The lowest amount of votes is Candidate " << candidates[i].id << ". " << candidates[i].name << " with " << candidates[i].count
-                 << " votes" << endl << endl;
+            cout << "The lowest amount of votes is Candidate " << candidates[i].id << ". "
+                    << candidates[i].name << " with " << candidates[i].count << " votes" << endl;
         }
 	}
 }

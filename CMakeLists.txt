@@ -3,4 +3,4 @@ project(ECVS)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(ECVS main.cpp voter.cpp candidate.cpp voter.h candidate.h)
+add_executable(ECVS main.cpp voter.cpp candidate.cpp voter.h candidate.h main.h)

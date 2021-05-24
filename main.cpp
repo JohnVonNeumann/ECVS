@@ -1,4 +1,9 @@
 #include <iostream>
+#include <vector>
+#include <sstream>
+#include <string>
+#include <fstream>
+
 #include "voter.h"
 #include "candidate.h"
 
@@ -65,6 +70,7 @@ const string CANDIDATE_FILE = "candidate.txt";
 int main()
 {
     welcome_banner();
+    read_voters_from_file();
 	while (true)
 	{
 		char choice;
@@ -120,6 +126,36 @@ void write_candidates_to_file()
     }
 }
 
+void read_voters_from_file() {
+    string line;
+    string element;
+
+    ifstream file(VOTER_FILE);
+
+    if (file.is_open()) {
+        while (getline(file, line)) {
+            vector<string> elements;
+            istringstream iss(line);
+            for (string line; iss >> line;) {
+                elements.push_back(line);
+            }
+
+            voter_t v;
+            v.voter_id = stoi(elements[0]);
+            v.name = elements[1];
+            v.age = stoi(elements[2]);
+            v.suburb = elements[3];
+            v.date_of_birth = elements[4];
+            v.candidate_selection = stoi(elements[5]);
+            v.electorate = elements[6];
+            v.previously_voted = elements[7];
+            v.salary = stoi(elements[8]);
+            v.retired = elements[9];
+
+            voters.push_back(v);
+        }
+    }
+}
 
 void print_candidate_numbers()
 {

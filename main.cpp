@@ -71,6 +71,7 @@ int main()
 {
     welcome_banner();
     read_voters_from_file();
+    read_candidates_from_file();
 	while (true)
 	{
 		char choice;
@@ -119,10 +120,10 @@ void write_candidates_to_file()
     // truncate to simplify the implementation
     file.open(CANDIDATE_FILE, ios::trunc);
     for (int i = 0; i < 10; ++i) {
-        candidate_t c = candidate[i];
+        candidate_t c = candidates[i];
         file << c.id << " " << c.name << " " << c.age << " "
              << c.gender << " " << c.electorate << " " << c.party << " "
-             << c.abbreviation << " " << c.logo << " " << c.officer << " " << c.count << endl;
+             << c.abbreviation << " " << c.political_position << " " << c.officer << " " << c.count << endl;
     }
 }
 
@@ -198,7 +199,7 @@ void print_candidate_numbers()
 	    cout << "Please enter a candidate ID between 1 and 10: " << endl;
 	    cin >> choice;
 	}
-	cout << "Candidate " << candidate[choice - 1].id << " - " << candidate[choice - 1].name << " has " << candidate[choice - 1].count << " votes" << endl;
+	cout << "Candidate " << candidates[choice - 1].id << " - " << candidates[choice - 1].name << " has " << candidates[choice - 1].count << " votes" << endl;
 }
 
 void add_votes_to_candidate()
@@ -224,20 +225,20 @@ void add_votes_to_candidate()
 	}
 
 	voters[votchoice - 1].candidate_selection = canchoice;
-	candidate[canchoice - 1].count += 1;
-	cout << candidate[canchoice - 1].name << " now has " << candidate[canchoice - 1].count << " votes " << endl;
+	candidates[canchoice - 1].count += 1;
+	cout << candidates[canchoice - 1].id << ". " << candidates[canchoice - 1].name << " now has " << candidates[canchoice - 1].count << " votes " << endl;
 }
 
 
 void display_lowest_voted_candidate()
 {
 	int index;
-	int temp = candidate[0].count;
+	int temp = candidates[0].count;
 	for (int i = 0; i < 10; i++)
 	{
-		if (temp > candidate[i].count)
+		if (temp > candidates[i].count)
 		{
-			temp = candidate[i].count;
+			temp = candidates[i].count;
 			index = i;
 		}
 	}
@@ -246,8 +247,8 @@ void display_lowest_voted_candidate()
 	// the loop one level higher but we're close to submission
 	// FUTURE WORK: create more efficient logic
 	for (int i = 0; i < 10; i++) {
-	    if (temp == candidate[i].count) {
-            cout << "The lowest amount of votes is " << candidate[i].name << " with " << candidate[i].count
+	    if (temp == candidates[i].count) {
+            cout << "The lowest amount of votes is Candidate " << candidates[i].id << ". " << candidates[i].name << " with " << candidates[i].count
                  << " votes" << endl << endl;
         }
 	}
@@ -257,10 +258,10 @@ void display_lowest_voted_candidate()
 void display_highest_voted_candidate()
 {
 	int large, i, index;
-	large = candidate[0].count;
+	large = candidates[0].count;
 	for (i = 1; i < 10; i++) {
-		if (candidate[i].count > large) {
-			large = candidate[i].count;
+		if (candidates[i].count > large) {
+			large = candidates[i].count;
 			index = i;
 		}
 	}
@@ -269,8 +270,8 @@ void display_highest_voted_candidate()
     // the loop one level higher but we're close to submission
     // FUTURE WORK: create more efficient logic
     for (int i = 0; i < 10; i++) {
-        if (large == candidate[i].count) {
-            cout << "The highest amount of votes is " << candidate[i].name << " with " << candidate[i].count
+        if (large == candidates[i].count) {
+            cout << "The highest amount of votes is Candidate " << candidates[i].id << ". "<< candidates[i].name << " with " << candidates[i].count
                  << " votes" << endl;
         }
     }

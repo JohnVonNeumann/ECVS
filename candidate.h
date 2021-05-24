@@ -1,6 +1,3 @@
-//
-// Created by lw on 23/5/21.
-//
 #include <iostream>
 #include <vector>
 
@@ -8,8 +5,6 @@ using namespace std;
 
 #ifndef ECVS_CANDIDATE_H
 #define ECVS_CANDIDATE_H
-
-// CANDIDATE DATA STRUCTURE:
 
 struct candidate_t
 {

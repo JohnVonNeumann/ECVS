@@ -5,9 +5,12 @@
 
 #include "voter.h"
 #include "candidate.h"
+#include "main.h"
 
 using namespace std;
 
+const string VOTER_FILE = "voter.txt";
+const string CANDIDATE_FILE = "candidate.txt";
 /*
  * Present menu to user
  * If selection P:
@@ -51,20 +54,6 @@ using namespace std;
  */
 
 // Function Prototypes
-char menu();
-void print_candidate_numbers();
-void add_votes_to_candidate();
-void display_lowest_voted_candidate();
-void display_highest_voted_candidate();
-void write_voters_to_file();
-void write_candidates_to_file();
-void read_voters_from_file();
-void read_candidates_from_file();
-void welcome_banner();
-void print_help();
-
-const string VOTER_FILE = "voter.txt";
-const string CANDIDATE_FILE = "candidate.txt";
 
 int main()
 {
